@@ -3,46 +3,41 @@ layout: main
 title: home
 permalink: /
 order: 1
-aside: yes
+styles: ["slick", "slick-theme", "home-styles"]
+onHomePage: false
 ---
-Home works!
-<!-- <ul>
+<article class="welcome">
+    <h2>Welcome to Yoko's Kitchen</h2>
+    <h3>Here you'll find the finest Japanese food you would ever eate and more...</h3>    
+</article>
 
-<li>@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");</li>
-<li>@import "_variables.scss";</li>
-<li>@import "_reset.scss";</li>
-<li>@import "_header-styles.scss";</li>
-<li>@import "_footer-styles.scss";</li>
-<li>@import "_aside-styles.scss";</li>
+<article class="other-pages">
+    {% for page in site.pages %}
+        {% if page.onHomePage %}
+            <a class="page-link" href="{{page.permalink}}">
+                <div class="img-container">
+                    <img src="{{page.img}}" alt="{{page.title}}">
+                </div>
+                <h2>{{page.title}}</h2>
+            </a>
+        {% endif %}
+    {% endfor %}
+</article>
 
-<li>//Global main styles</li>
-<li>body {</li>
-<li>background-image: url("https://images.unsplash.com/photo-1525947088131-b701cd0f6dc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80");</li>
-<li>background-repeat: repeat-y;</li>
-<li>background-size: cover;</li>
-<li>background-position: center;</li>
-<li>font-family: Lato, sans-serif;</li>
-<li>font-size: 17px;</li>
-<li>color: $primary-dark;</li>
-<li>}</li>
-
-<li>header, nav, main, footer {</li>
-<li>width: 85%;</li>
-<li>margin: auto;</li>
-<li>}</li>
-
-<li>main {</li>
-<li>min-height: calc(100vh - 275px);</li>
-<li>background-color: $primary-light;</li>
-<li>margin: 5px auto;</li>
-<li>display: grid;</li>
-<li>grid-template-columns: repeat(4,1fr);</li>
-
-<li>.page-content {</li>
-<li>grid-column: 1 / span 3;</li>
-<li>}</li>
-<li>}</li>
-
-
-    
-</ul> -->
+<article class="dishes">
+    <h2>Popular dishes today:</h2>
+    <ul class="popular-dishes">
+        {% for dish in site.data.data-list.popular-recipes %}
+            <li class="dish">
+                <div class="img-container">
+                    <img src="{{dish.img}}" alt="{{dish.title}}">
+                </div>
+                <h2>{{dish.title}} - {{dish.price}}</h2>
+            <li>
+        {% endfor %}
+    </ul>
+</article>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/slick.min.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/slick-style.js"></script>

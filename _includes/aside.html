@@ -1,11 +1,10 @@
 <aside>
     <div class="aside-container">
-        <h3>Aside header</h3>
+        <h3>Popular dishes</h3>
         <ul>
-            <li style="color:black;">Item 1</li>
-            <li style="color:black;">Item 2</li>
-            <li style="color:black;">Item 3</li>
-            <li style="color:black;">Item 4</li>
+            {% for dish in site.data.data-list.popular-recipes %}
+                <li>{{dish.title}}</li>
+            {% endfor %}
         </ul>
     </div>
 </aside>

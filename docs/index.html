@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yoko's Kitchen</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
+        
+            <link rel="stylesheet" href="/assets/css/slick.css">
+        
+            <link rel="stylesheet" href="/assets/css/slick-theme.css">
+        
+            <link rel="stylesheet" href="/assets/css/home-styles.css">
+        
+    
 </head>
 <body>
     <header>
@@ -44,60 +53,103 @@
 </header>
     <main>
         <section class="page-content">
-            Home works!
-<!-- <ul>
+            <article class="welcome">
+    <h2>Welcome to Yoko's Kitchen</h2>
+    <h3>Here you'll find the finest Japanese food you would ever eate and more...</h3>    
+</article>
 
-<li>@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");</li>
-<li>@import "_variables.scss";</li>
-<li>@import "_reset.scss";</li>
-<li>@import "_header-styles.scss";</li>
-<li>@import "_footer-styles.scss";</li>
-<li>@import "_aside-styles.scss";</li>
-
-<li>//Global main styles</li>
-<li>body {</li>
-<li>background-image: url("https://images.unsplash.com/photo-1525947088131-b701cd0f6dc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80");</li>
-<li>background-repeat: repeat-y;</li>
-<li>background-size: cover;</li>
-<li>background-position: center;</li>
-<li>font-family: Lato, sans-serif;</li>
-<li>font-size: 17px;</li>
-<li>color: $primary-dark;</li>
-<li>}</li>
-
-<li>header, nav, main, footer {</li>
-<li>width: 85%;</li>
-<li>margin: auto;</li>
-<li>}</li>
-
-<li>main {</li>
-<li>min-height: calc(100vh - 275px);</li>
-<li>background-color: $primary-light;</li>
-<li>margin: 5px auto;</li>
-<li>display: grid;</li>
-<li>grid-template-columns: repeat(4,1fr);</li>
-
-<li>.page-content {</li>
-<li>grid-column: 1 / span 3;</li>
-<li>}</li>
-<li>}</li>
-
-
+<article class="other-pages">
     
-</ul> -->
-        </section>
         
-            <aside>
-    <div class="aside-container">
-        <h3>Aside header</h3>
-        <ul>
-            <li style="color:black;">Item 1</li>
-            <li style="color:black;">Item 2</li>
-            <li style="color:black;">Item 3</li>
-            <li style="color:black;">Item 4</li>
-        </ul>
-    </div>
-</aside>
+    
+        
+            <a class="page-link" href="/about/">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1461727885569-b2ddec0c4328?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="about">
+                </div>
+                <h2>about</h2>
+            </a>
+        
+    
+        
+            <a class="page-link" href="/catering/">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1518619745898-93e765966dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="catering">
+                </div>
+                <h2>catering</h2>
+            </a>
+        
+    
+        
+            <a class="page-link" href="/classes/">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1470114755716-3e1124c6c3bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="classes">
+                </div>
+                <h2>classes</h2>
+            </a>
+        
+    
+        
+    
+        
+    
+        
+    
+</article>
+
+<article class="dishes">
+    <h2>Popular dishes today:</h2>
+    <ul class="popular-dishes">
+        
+            <li class="dish">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1563118946-9d60eae4a82d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Yakitori (grilled chicken)">
+                </div>
+                <h2>Yakitori (grilled chicken) - 12$</h2>
+            <li>
+        
+            <li class="dish">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1564836235910-c3055ca0f912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Tsukune (minced chicken patties)">
+                </div>
+                <h2>Tsukune (minced chicken patties) - 15$</h2>
+            <li>
+        
+            <li class="dish">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1556845752-92f6fe9f596d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Okonomiyaki (savory pancakes)">
+                </div>
+                <h2>Okonomiyaki (savory pancakes) - 11$</h2>
+            <li>
+        
+            <li class="dish">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1562565651-8d54fa55316d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Mizutaki (chicken stew)">
+                </div>
+                <h2>Mizutaki (chicken stew) - 10$</h2>
+            <li>
+        
+            <li class="dish">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1565941072372-0f0f10c8b7dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Sushi">
+                </div>
+                <h2>Sushi - 15$</h2>
+            <li>
+        
+            <li class="dish">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1565355857989-333dff0b3dc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80" alt="Tempura">
+                </div>
+                <h2>Tempura - 18$</h2>
+            <li>
+        
+    </ul>
+</article>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/slick.min.js"></script>
+<script type="text/javascript" src="/assets/js/slick-style.js"></script>
+        </section>
         
     </main>
     <footer>

@@ -1,6 +1,7 @@
 aside {
     grid-column: 4;
     justify-self: right;
+    font-style: italic;
     
     .aside-container {
         width: 100%;
@@ -9,6 +10,13 @@ aside {
         padding: 0.5em;
         border-left: 2px solid $primary;
         
+        ul li {
+            list-style-type: none;
+            color: #795548;
+            border-bottom: solid 2px #795548;
+            padding: 0.3em 0;
+        }
+
         h3 {text-align: center;}
     }
 }

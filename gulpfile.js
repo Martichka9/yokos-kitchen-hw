@@ -10,22 +10,17 @@ gulp.task("sass", function() {
 	return gulp.src( '_scss/**/*.scss')
 		.pipe( sass().on('error', sass.logError) )
 		.pipe( csso() )
-		.pipe( gulp.dest( './docs/css/' ) )
+		.pipe( gulp.dest( './docs/assets/css/' ) )
 		.pipe( browserSync.stream({ match: '**/*.css' }) )
 	;
 });
 
-// gulp.task('copy', function() {
-//     return gulp.src([
-// 		'_scss/fa/css/*.css',
-// 		'_scss/fa/fa/webfonts/*.eot',
-// 		'_scss/fa/webfonts/*.svg',
-// 		'_scss/fa/webfonts/*.ttf',
-// 		'_scss/fa/webfonts/*.woff',
-// 		'_scss/fa/webfonts/*.woff2'
-// 	], {base:'_scss/'})
-//         .pipe(gulp.dest('./docs/css/'));
-// });
+gulp.task('copy', function() {
+    return gulp.src([
+		'_scss/*.css'
+	], {base:'_scss/'})
+        .pipe(gulp.dest('./docs/assets/css/'));
+});
 
 // Jekyll
 gulp.task("jekyll-dev", function() {
@@ -55,17 +50,17 @@ gulp.task("watch", function() {
 			"./_layouts/*.html",
 			"./_data/*.json"
 		]
-    //).on('change', gulp.series('jekyll-dev', 'sass', 'copy') );
-    ).on('change', gulp.series('jekyll-dev', 'sass') );
+    ).on('change', gulp.series('jekyll-dev', 'sass', 'copy') );
+    //).on('change', gulp.series('jekyll-dev', 'sass') );
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
 });
 
-//gulp.task("default", gulp.series('jekyll-dev', 'sass', 'copy', 'watch'));
-gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));
+gulp.task("default", gulp.series('jekyll-dev', 'sass', 'copy', 'watch'));
+//gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));
 
-//gulp.task("deploy", gulp.series('jekyll', 'sass', 'copy' , function() {
-gulp.task("deploy", gulp.series('jekyll', 'sass', function() {
+gulp.task("deploy", gulp.series('jekyll', 'sass', 'copy' , function() {
+//gulp.task("deploy", gulp.series('jekyll', 'sass', function() {
 	return cp.spawn('git status && git commit -am "Update docs folder for GHPages, img alt + page lang fixes, " && git pull && git push', { stdio: "inherit", shell: true });
 }));

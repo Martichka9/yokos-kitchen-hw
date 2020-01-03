@@ -30,6 +30,29 @@ main {
 
     .page-content {
         grid-column: 1 / span 3;
+        padding: 1em;
+
+        .welcome {
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 15px -5px #191416;
+            min-height: 150px;
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            align-items: center;
+            padding: 1em 0.3em;
+            margin: 2em 0;
+        }
+    
+    }
+        
+    .other-pages {
+        @include displayFlex(center,center);
+        flex-wrap: wrap;
+    }
+    .dish {
+        box-shadow: 0 0 15px -5px $primary-dark;
+        width: initial;
     }
 }
 

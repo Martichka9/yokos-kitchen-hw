@@ -1,0 +1,49 @@
+
+main section.page-content  {
+    grid-column: 1 /span 4;
+    
+    .img-container {
+        width: 90%;
+        height: 90%;
+        overflow: hidden;
+        margin: 5px auto;
+    }
+}
+
+.other-pages {
+    .page-link{
+        width: 300px;
+        height: 250px;
+        margin: 0.3em;
+        display: grid;
+        grid-template-rows: 185px auto;
+    }
+
+    h2 {
+        width: 85%;
+        margin: 5px auto;
+    }
+}
+
+.dishes {
+    padding: 1em;
+
+    h2 {
+        text-align: center;
+    }
+
+    .dish{
+        margin: 1em;
+        width: 250px;
+        height: 250px;
+        display: grid;
+        grid-template-rows: 130px auto;
+
+        .img-container {width: initial;}
+        
+        h2 {
+            width: 85%;
+            margin: 5px auto;
+        }
+    }
+}

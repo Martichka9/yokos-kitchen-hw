@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{site.title}}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
+    {% if page.styles %}
+        {% for style in page.styles %}
+            <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{style}}.css">
+        {% endfor %}
+    {% endif %}
 </head>
 <body>
     {% include header.html %}

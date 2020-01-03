@@ -1,0 +1,14 @@
+aside {
+    grid-column: 4;
+    justify-self: right;
+    
+    .aside-container {
+        width: 100%;
+        min-width: 290px;
+        margin-top: 1em;
+        padding: 0.5em;
+        border-left: 2px solid $primary;
+        
+        h3 {text-align: center;}
+    }
+}

@@ -10,7 +10,13 @@
 <body>
     {% include header.html %}
     <main>
-        {{content}}
+        <section class="page-content">
+            {{content}}
+        </section>
+        {% if page.aside %}
+            {% include aside.html %}
+        {% endif %}
     </main>
+    {% include footer.html %}
 </body>
 </html>

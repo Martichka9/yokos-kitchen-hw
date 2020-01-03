@@ -1,0 +1,8 @@
+footer {
+    @include headerFooterBg;
+    background-position: bottom;
+    background-size: inherit;
+    height: 60px;
+    text-align: center;
+    @include displayFlex(center,center);
+}

@@ -6,6 +6,11 @@ $primary-dark: #191416;
 $primary-light: #e3dbd8;
 
 
+@mixin headerFooterBg {
+    background: url("https://cdn.pixabay.com/photo/2018/04/26/22/30/background-3353278_960_720.jpg") no-repeat;
+    background-size: cover; 
+}
+
 @mixin textShadow($color) {
     text-shadow: 0 0 3px $color;
 }

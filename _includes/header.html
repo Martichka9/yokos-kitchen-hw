@@ -1,0 +1,14 @@
+<header>
+    <div class="menu-icon"><i class="fas fa-book-open"></i></div>
+    <h1 class="site-title">{{site.title}}</h1>
+    <nav class="navigation">
+        <ul class="site-menu">
+            {% assign orderedItems = site.pages | sort: "order" %}
+            {% for item in orderedItems %}
+                {% if item.title %}
+                    <li class="site-menu-item {% if item.url == page.url %}selected{% endif %}"><a href="{{item.permalink}}">{{item.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

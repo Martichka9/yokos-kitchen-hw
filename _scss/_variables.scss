@@ -1,0 +1,17 @@
+$max-width: 1024;
+
+//Colors
+$primary: #6a4d3b;//#684a35; //#71523e
+$primary-dark: #191416;
+$primary-light: #e3dbd8;
+
+
+@mixin textShadow($color) {
+    text-shadow: 0 0 3px $color;
+}
+
+@mixin displayFlex($allignItems, $justifyContent) {
+    display: flex;
+    align-items: $allignItems;
+    justify-content: $justifyContent;
+}

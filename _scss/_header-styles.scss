@@ -1,0 +1,43 @@
+header {
+    background: url("https://cdn.pixabay.com/photo/2018/04/26/22/30/background-3353278_960_720.jpg");
+    background-size: cover; 
+    
+    .menu-icon {
+        display: none;
+    }
+    
+    .site-title {
+        height: 155px;
+        text-align: right;
+        padding: 40px 60px;
+        @include textShadow($primary-light);
+    }
+
+    .navigation {
+        border-top: 5px solid $primary-dark;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .site-menu{
+        @include displayFlex(center, flex-start);
+        &-item {
+            margin: 0 0.1em;
+            padding: 0.5em;
+            font-weight: bold;
+            color: #fff;
+            @include textShadow($primary-dark);
+        }
+        
+        &-item:hover, .selected {
+            color: $primary;
+            font-style: italic;
+            @include textShadow($primary-light);
+            background: radial-gradient(rgba($primary-light,1) 0% ,rgba($primary-light,0) 85%);
+
+        }
+
+    }
+
+
+}
+

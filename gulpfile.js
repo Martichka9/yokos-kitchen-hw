@@ -17,7 +17,12 @@ gulp.task("sass", function() {
 
 gulp.task('copy', function() {
     return gulp.src([
-		'_scss/*.css'
+		'_scss/**/*.css',
+		'_scss/**/*.eot',
+		'_scss/**/*.svg',
+		'_scss/**/*.ttf',
+		'_scss/**/*.woff',
+		'_scss/**/*.woff2',
 	], {base:'_scss/'})
         .pipe(gulp.dest('./docs/assets/css/'));
 });

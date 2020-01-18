@@ -3,6 +3,24 @@ footer {
     background-position: bottom;
     background-size: inherit;
     height: 60px;
-    text-align: center;
-    @include displayFlex(center,center);
+    text-align: left;
+    padding: 0 1em;
+    @include displayFlex(center,left);
+
+    div {
+        width: 30%;
+        color: $primary-light;
+        text-shadow: 0 0 7px $primary-dark;
+        p {
+            display: inline;
+        }
+
+        p, a, h3 {
+            font-size: 25px;
+        }
+
+        p,a {
+            margin: 0 .5em;
+        }
+    }
 }

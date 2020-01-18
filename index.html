@@ -3,7 +3,7 @@ layout: main
 title: home
 permalink: /
 order: 1
-styles: ["slick", "slick-theme", "home-styles"]
+styles: ["/assets/css/slick", "/assets/css/slick-theme", "/assets/css/home-styles"]
 onHomePage: false
 ---
 <article class="welcome">
@@ -14,7 +14,7 @@ onHomePage: false
 <article class="other-pages">
     {% for page in site.pages %}
         {% if page.onHomePage %}
-            <a class="page-link" href="{{site.baseurl}}/{{page.permalink}}">
+            <a class="page-link" href="{{site.baseurl}}{{page.permalink}}">
                 <div class="img-container">
                     <img src="{{page.img}}" alt="{{page.title}}">
                 </div>

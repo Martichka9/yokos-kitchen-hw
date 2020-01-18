@@ -1,0 +1,28 @@
+.catering{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.meal {
+    position: relative;
+    width: 300px;
+    margin: .6em;
+    display: grid;
+    grid-template-rows: 170px auto;
+    .img-container{
+        overflow: hidden;
+    }
+    p {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        padding: 1.5em;
+        display: none;
+        background-color: rgba($primary-light,0.5);
+    }
+}
+
+.meal:hover p {
+    display: block;
+}

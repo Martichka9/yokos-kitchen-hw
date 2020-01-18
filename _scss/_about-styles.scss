@@ -1,0 +1,18 @@
+main .page-content.about-us {
+    grid-column: 1 / span 4;
+    p{
+        margin: 1em;
+        text-align: justify;
+        color: $gray;
+        text-shadow: 0 0 1px $primary-dark;
+    }
+    p:first-line {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    h2 {
+        text-align: center;
+        color: $warm-light;
+        text-shadow: 0 0 1px rgba($primary,0.5);
+    }
+}

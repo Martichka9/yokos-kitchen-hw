@@ -3,7 +3,7 @@
         <h3>Popular dishes</h3>
         <ul>
             {% for dish in site.data.data-list.popular-recipes %}
-                <li>{{dish.title}}</li>
+                <li><a href="#">{{dish.title}}</a></li>
             {% endfor %}
         </ul>
     </div>

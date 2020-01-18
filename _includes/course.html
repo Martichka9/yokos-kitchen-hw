@@ -1,0 +1,11 @@
+<figure class="course-figure">
+    <img src="{{course.img}}" alt="{{course.img-title}} dish"/>
+    <figcaption>{{course.img-title}}</figcaption>
+</figure>
+<div class="course-info">
+    <div class="course-headings">
+        <h2>{{course.title}}</h2>
+        <h3>{{course.type}}</h3>
+    </div>
+    <p class="course-intro">{{course.info | slice: 0, 117}}...</p>
+</div>

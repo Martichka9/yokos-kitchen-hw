@@ -1,10 +1,11 @@
-$max-width: 1024;
+$max-width: 1146px;
 
 //Colors
 $primary: #6a4d3b;//#684a35; //#71523e
 $primary-dark: #191416;
-$primary-light: #e3dbd8;
-
+$primary-light: #f9f8f7;
+$warm-light:  #e2c483;
+$gray: #646464;
 
 @mixin headerFooterBg {
     background: url("https://cdn.pixabay.com/photo/2018/04/26/22/30/background-3353278_960_720.jpg") no-repeat;

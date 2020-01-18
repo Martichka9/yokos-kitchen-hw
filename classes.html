@@ -7,5 +7,21 @@ aside: yes
 onHomePage: true
 img: https://images.unsplash.com/photo-1470114755716-3e1124c6c3bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80
 ---
+{% assign courses = site.data.data-list.courses %}
 
-Classes works!
+{% for course in courses %}
+    <article id="course-{{course.id}}">
+        <a href="#" class="course">
+            {% include course.html %}
+        </a>
+    </article>
+{% endfor %}
+
+<article id="modal">
+    <div class="course content">
+        <button id="close" type="button">x</button>
+        {% include course.html %}
+    </div>
+</article>
+
+<script src="../assets/js/modal.js"></script>

@@ -4,6 +4,7 @@
 @import "_header-styles.scss";
 @import "_footer-styles.scss";
 @import "_aside-styles.scss";
+@import "_classes-styles.scss";
 
 //Global main styles
 body {
@@ -17,7 +18,8 @@ body {
 }
 
 header, nav, main, footer {
-	width: 85%;
+    width: 85%;
+    max-width: $max-width;
 	margin: auto;
 }
 

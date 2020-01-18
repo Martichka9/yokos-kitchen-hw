@@ -22,6 +22,14 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('./docs/assets/css/'));
 });
 
+//Copy json data file
+gulp.task('copy-json', function() {
+    return gulp.src([
+		'_data/*.json'
+	], {base:'_data/'})
+        .pipe(gulp.dest('./docs/assets/data/'));
+});
+
 // Jekyll
 gulp.task("jekyll-dev", function() {
 	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl ''"], { stdio: "inherit", shell: true });
@@ -48,16 +56,18 @@ gulp.task("watch", function() {
 			"./*.yml",
 			"./_includes/*.html",
 			"./_layouts/*.html",
+			"./assets/**/*.js",
 			"./_data/*.json"
 		]
-    ).on('change', gulp.series('jekyll-dev', 'sass', 'copy') );
+    ).on('change', gulp.series('jekyll-dev', 'sass', 'copy','copy-json') );
     //).on('change', gulp.series('jekyll-dev', 'sass') );
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
+	gulp.watch( 'docs/**/*.json' ).on('change', browserSync.reload );
 });
 
-gulp.task("default", gulp.series('jekyll-dev', 'sass', 'copy', 'watch'));
+gulp.task("default", gulp.series('jekyll-dev', 'sass', 'copy',  'copy-json', 'watch'));
 //gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));
 
 gulp.task("deploy", gulp.series('jekyll', 'sass', 'copy' , function() {

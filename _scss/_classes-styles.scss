@@ -64,6 +64,7 @@ article .course:hover {
         min-height: 450px;
         background-color: $primary-light;
         margin: 50px auto;
+        overflow-y: scroll;
         border-radius: 0.3em;
     }
     #close {

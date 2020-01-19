@@ -1,8 +1,8 @@
 footer {
     @include headerFooterBg;
     background-position: bottom;
-    background-size: inherit;
-    height: 60px;
+    background-size: cover;
+    height: 80px;
     text-align: left;
     padding: 0 1em;
     @include displayFlex(center,left);

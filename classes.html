@@ -11,7 +11,7 @@ img: https://images.unsplash.com/photo-1470114755716-3e1124c6c3bd?ixlib=rb-1.2.1
 
 {% for course in courses %}
     <article id="course-{{course.id}}">
-        <a href="#" class="course">
+        <a href="#course-{{course.id}}" class="course">
             {% include course.html %}
         </a>
     </article>

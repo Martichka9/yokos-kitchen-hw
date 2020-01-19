@@ -9,7 +9,7 @@ main .page-content.contacts {
 }
 .contacts {
     .contact-info {
-        padding: 1em;
+        padding: o 1em 1em;
     }
 
     iframe{
@@ -29,7 +29,6 @@ main .page-content.contacts {
     }
 
     h3 {
-        margin-top: 1em;
         color: $warm-light;
         text-shadow: 0 0 1px rgba($primary, 0.5);
     }

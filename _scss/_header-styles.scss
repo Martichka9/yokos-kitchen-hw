@@ -2,7 +2,7 @@ header {
     @include headerFooterBg;
     background-size: cover;
 
-    .menu-icon {
+    .menu-icon, #menu-btn {
         display: none;
     }
     

@@ -8,6 +8,7 @@
 @import "_catering-styles.scss";
 @import "_about-styles.scss";
 @import "_contacts-styles.scss";
+@import "_responsive.scss";
 
 //Global main styles
 body {
@@ -31,6 +32,7 @@ main {
     margin: 5px auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-auto-flow: dense;
 
     .page-content {
         grid-column: 1 / span 3;

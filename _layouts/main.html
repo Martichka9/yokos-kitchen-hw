@@ -18,12 +18,12 @@
 <body>
     {% include header.html %}
     <main>
-        <section class="page-content">
-            {{content}}
-        </section>
         {% if page.aside %}
             {% include aside.html %}
         {% endif %}
+        <section class="page-content">
+            {{content}}
+        </section>
     </main>
     {% include footer.html %}
 </body>

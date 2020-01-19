@@ -1,0 +1,58 @@
+@media only screen and (max-width: 1200px) {
+    aside{
+        grid-column: 1 / span 4;
+        justify-self: auto;
+        .aside-container{
+            border: none;
+            padding: 0 1em;
+        }
+    }
+    main section.page-content {
+        grid-column: 1/span 4;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .course {
+        display: block;
+    }
+}
+@media only screen and (max-width: 630px) {
+    header h1.site-title {
+        padding: 40px 10px;
+    }
+}
+@media only screen and (max-width: 510px) {
+    aside .aside-container ul li {width: 90%;}
+    header h1.site-title {
+        padding: 0 20px;
+    }
+    .navigation {
+        height: 43px;
+        ul {
+            display: none;
+        }
+    }
+    header .menu-icon {
+        display: block;
+        font-size: 30px;
+        height: 30px;
+        position: absolute;
+        top: 165px;
+        left: 1.5em;
+        text-shadow: 0 0 3px #f9f8f7;
+    }
+    header .menu-icon:hover {
+        cursor: pointer;
+    }
+
+    #menu-btn:checked ~ nav > ul {
+        display: block;
+        position: absolute;
+        background: url(https://cdn.pixabay.com/photo/2018/04/26/22/30/background-3353278_960_720.jpg) no-repeat;
+        background-size: cover;
+        width: 85%;
+        text-align: center;
+        top: 208px
+    }
+}
